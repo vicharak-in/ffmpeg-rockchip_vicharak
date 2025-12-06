@@ -44,7 +44,7 @@ override_dh_auto_install:
 	install -m 755 /usr/lib/libvmaf.so debian/tmp/usr/lib/vicharak/
 	install -m 755 /usr/lib/libvmaf.so.3 debian/tmp/usr/lib/vicharak/
 	install -m 755 /usr/lib/libvmaf.so.3.0.0 debian/tmp/usr/lib/vicharak/
-	install -m 755 /usr/lib/aarch64-linux-gnu/libaom.so.3.8.2 debian/tmp/usr/lib/vicharak/
+	install -m 755 /usr/lib/aarch64-linux-gnu/libaom.so.3.3.0 debian/tmp/usr/lib/vicharak/
 	install -m 755 /usr/lib/aarch64-linux-gnu/libaom.so.3 debian/tmp/usr/lib/vicharak/
 	ln -sf libaom.so.3 debian/tmp/usr/lib/vicharak/libaom.so
 	install -m 755 /usr/lib/libx265.so.215 debian/tmp/usr/lib/vicharak/

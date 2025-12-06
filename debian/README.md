@@ -105,6 +105,9 @@ cmake -G "Unix Makefiles" \
   -DENABLE_SHARED=ON \
   -DENABLE_STATIC=ON \
   -DENABLE_CLI=ON \
+  -DENABLE_SVE2=OFF \
+  -DENABLE_SVE=OFF \
+  -DCROSS_COMPILE_ARM64=OFF \
   ../../source
 make
 sudo make install
