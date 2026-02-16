@@ -54,19 +54,23 @@ sudo apt-get install nasm
 ## Build RKMPP (Rockchip Media Process Platform)
 This is the MPP comaptible with Rockchip platforms. It includes support for hardware encoders and decoders. Required to configure ffmpeg with ``--enable-rkmpp`` option.
 ```
-mkdir -p ~/ffmpeg-dev && cd ~/ffmpeg-dev 
-git clone -b jellyfin-mpp --depth=1 https://github.com/nyanmisaka/mpp.git rkmpp
-pushd rkmpp
-mkdir rkmpp_build
-pushd rkmpp_build
+cd ~/ffmpeg-dev
+rm -rf rkmpp
+
+git clone https://github.com/HermanChen/mpp.git
+cd mpp
+
+git checkout release
+mkdir build && cd build
 cmake \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DBUILD_SHARED_LIBS=ON \
-    -DBUILD_TEST=OFF \
-    ..
-make -j $(nproc)
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DBUILD_SHARED_LIBS=ON \
+  -DBUILD_TEST=OFF \
+  ..
+make -j$(nproc)
 sudo make install
+
 ```
 
 ## Build RKRGA (Rockchip Raster Graphic Acceleration)
@@ -96,9 +100,10 @@ sudo apt-get install libx264-dev
 Provides H.265 software video encoder. Required to configure ffmpeg with ``--enable-libx265`` option.
 ```
 mkdir -p ~/ffmpeg-dev && cd ~/ffmpeg-dev
-wget -O x265.tar.bz2 https://bitbucket.org/multicoreware/x265_git/get/master.tar.bz2 && \
-tar xjvf x265.tar.bz2 && \
-cd multicoreware*/build/linux && \
+rm -rf x265
+git clone https://github.com/videolan/x265.git
+cd x265/build/linux
+
 cmake -G "Unix Makefiles" \
   -DCMAKE_INSTALL_PREFIX=/usr \
   -DCMAKE_BUILD_TYPE=Release \
@@ -109,8 +114,10 @@ cmake -G "Unix Makefiles" \
   -DENABLE_SVE=OFF \
   -DCROSS_COMPILE_ARM64=OFF \
   ../../source
-make
+
+make -j$(nproc)
 sudo make install
+
 ```
 
 ## libvpx
