@@ -47,7 +47,7 @@ override_dh_auto_install:
 	install -m 755 /usr/lib/aarch64-linux-gnu/libaom.so.3.3.0 debian/tmp/usr/lib/vicharak/
 	install -m 755 /usr/lib/aarch64-linux-gnu/libaom.so.3 debian/tmp/usr/lib/vicharak/
 	ln -sf libaom.so.3 debian/tmp/usr/lib/vicharak/libaom.so
-	install -m 755 /usr/lib/libx265.so.215 debian/tmp/usr/lib/vicharak/
+	install -m 755 /usr/lib/libx265.so.* debian/tmp/usr/lib/vicharak/
 	ln -sf libx265.so.215 debian/tmp/usr/lib/vicharak/libx265.so
 	dh_install
 
