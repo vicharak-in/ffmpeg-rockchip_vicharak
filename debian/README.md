@@ -69,6 +69,28 @@ make -j $(nproc)
 sudo make install
 ```
 
+If the above nyanmisaka's repo doesn't work out, use the below one. Generally below repo works for
+all chips. Nyanmisaka's was used for rk3588
+
+```
+cd ~/ffmpeg-dev
+rm -rf rkmpp
+
+git clone https://github.com/HermanChen/mpp.git
+cd mpp
+
+git checkout release
+mkdir -p build && cd build/linux
+cmake \
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DBUILD_SHARED_LIBS=ON \
+  -DBUILD_TEST=OFF \
+  ..
+make -j$(nproc)
+sudo make install
+```
+
 ## Build RKRGA (Rockchip Raster Graphic Acceleration)
 This is the RGA version compatible with Rockchip platforms. It includes support for hardware filters. Required to configure ffmpeg with ``--enable-rkrga`` option.
 ```
