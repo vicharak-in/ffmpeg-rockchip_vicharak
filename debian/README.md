@@ -216,7 +216,7 @@ sudo apt install libopenal-dev ocl-icd-opencl-dev opencl-headers libopengl-dev l
 ## Compile ffmpeg and build a custom debian package
 Clone the ``debian`` branch ffmpeg-rockchip\_vicharak:
 ```
-git clone -b debian https://github.com/BrajeshPatil/ffmpeg-rockchip_vicharak
+git clone -b vicharak-jammy https://github.com/vicharak-in/ffmpeg-rockchip_vicharak
 cd ffmpeg-rockchip_vicharak
 ```
 
