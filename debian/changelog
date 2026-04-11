@@ -1,3 +1,10 @@
+ffmpeg (7:6.1.1-3ubuntu7) stable; urgency=medium
+
+  * Use rockchip's mpp instead of HermanChen
+  * Add -lpthread while building the package
+
+ -- djkabutar <d.kabutarwala@yahoo.com>  Sat, 11 Apr 2026 11:35:10 +0530
+
 ffmpeg (7:6.1.1-3ubuntu6) stable; urgency=medium
 
   * Custom build with Rockchip MPP and RGA support.
