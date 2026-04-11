@@ -113,4 +113,5 @@ override_dh_auto_configure:
 	--enable-ladspa \
 	--enable-libopenjpeg \
 	--enable-libflite \
-	--enable-libzmq
+	--enable-libzmq \
+	--extra-libs=-lpthread
