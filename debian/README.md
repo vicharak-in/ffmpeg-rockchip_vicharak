@@ -57,7 +57,7 @@ This is the MPP comaptible with Rockchip platforms. It includes support for hard
 cd ~/ffmpeg-dev
 rm -rf rkmpp
 
-git clone https://github.com/HermanChen/mpp.git
+git clone https://github.com/rockchip-linux/mpp.git
 cd mpp
 
 git checkout release
