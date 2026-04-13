@@ -1,3 +1,9 @@
+ffmpeg (7:6.1.1-3ubuntu8) stable; urgency=medium
+
+  * Remove libsvtav1 support from vaaman
+
+ -- djkabutar <d.kabutarwala@yahoo.com>  Sat, 13 Apr 2026 11:52:10 +0530
+
 ffmpeg (7:6.1.1-3ubuntu7) stable; urgency=medium
 
   * Use rockchip's mpp instead of HermanChen
